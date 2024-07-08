@@ -38,24 +38,6 @@ export class PayloadAdapter implements Adapter {
       },
     })
   }
-  // private payload: Payload
-  // private cachedPayload: CachedPayload
-
-  // constructor(payload: Payload, cachedPayload: CachedPayload) {
-  //   this.payload = payload
-  //   this.cachedPayload = cachedPayload
-  // }
-
-  // public static async createInstance(): Promise<PayloadAdapter> {
-  //   const payload = await getPayloadHMR({ config })
-  //   const cachedPayload = getCachedPayload(payload)
-
-  //   return new PayloadAdapter(payload, cachedPayload)
-  // }
-
-  // public static async initialize(): Promise<PayloadAdapter> {
-  //   return await PayloadAdapter.createInstance()
-  // }
 
   public async deleteSession(sessionId: string): Promise<void> {
     await this.payload!.delete({
